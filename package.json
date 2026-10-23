@@ -1,0 +1,27 @@
+{
+  "name": "solyne",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@11.8.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "benchmark:mask": "npm run benchmark:mask --workspace @solyne/image-pipeline --",
+    "dev:api": "npm run dev --workspace @solyne/api",
+    "dev:mobile": "npm run start --workspace @solyne/mobile",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint .",
+    "test": "npm run test --workspaces --if-present",
+    "verify": "npm run typecheck && npm run lint && npm run test"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "eslint-config-expo": "^57.0.2",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@solyne/image-pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "benchmark:mask": "node --import tsx src/benchmark/cli.ts",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "vitest": "^5.0.2"
+  },
+  "dependencies": {
+    "@tensorflow-models/body-pix": "^2.2.1",
+    "@tensorflow/tfjs": "^4.22.0",
+    "sharp": "^0.35.4"
+  }
+}

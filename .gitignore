@@ -1,0 +1,16 @@
+node_modules/
+.expo/
+dist/
+coverage/
+*.log
+.DS_Store
+
+**/.env
+**/.env.*
+!**/.env.example
+
+test-images/
+benchmark-output/
+
+# Accidental npm cache directory
+apps/mobile/--no-audit/
